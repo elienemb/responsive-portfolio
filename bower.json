@@ -1,0 +1,21 @@
+{
+  "name": "karine",
+  "homepage": "https://github.com/elienemb/responsive-portfolio",
+  "authors": [
+    "eliene <elienemb@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "boostrap#^3.3.7"
+  }
+}
