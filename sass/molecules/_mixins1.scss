@@ -1,0 +1,123 @@
+@charset 'UTF-8';
+
+// NAME: font-face
+@mixin font-face($name, $url) {
+  @font-face {
+    font-family: '#{$name}';
+    src: url('#{$url}.eot');
+    src: url('#{$url}.eot#iefix') format("embedded-opentype"),
+      url('#{$url}.woff2') format('woff2'),
+      url('#{$url}.woff') format('woff'),
+      url('#{$url}.ttf') format('truetype'),
+      url('#{$url}.svg##{$name}') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+    @content;
+  }
+}
+
+// NAME: font-face
+@mixin font-face2($name, $url) {
+  @font-face {
+    font-family: '#{$name}';
+    src: url('#{$url}.eot');
+    src: url('#{$url}.eot#iefix') format("embedded-opentype"),
+      url('#{$url}.woff') format('woff'),
+      url('#{$url}.ttf') format('truetype'),
+      url('#{$url}.svg##{$name}') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+    @content;
+  }
+}
+
+
+/*********************
+     BREAKPOINTS
+*********************/
+$breakpoints: (
+  'small':  ( min-width:  680px ),
+  'medium': ( min-width:  768px ),
+  'large':  ( min-width: 1024px )
+) !default;
+
+/// Mixin to manage responsive breakpoints
+/// @author Hugo Giraudel
+/// @param {String} $breakpoint - Breakpoint name
+/// @require $breakpoints
+@mixin respond-to($breakpoint) {
+  // If the key exists in the map
+  @if map-has-key($breakpoints, $breakpoint) {
+    // Prints a media query based on the value
+    @media #{inspect(map-get($breakpoints, $breakpoint))} {
+      @content;
+    }
+  }
+ 
+  // If the key doesn't exist in the map
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
+}
+
+
+// fim breakpoint
+
+/* */
+@mixin center($horizontal: true, $vertical: true) {
+  position: absolute;
+  @if ($horizontal and $vertical) {
+    top: 50%;
+    left: 50%;
+    @include translate3d(-50%,-50%,0);
+  } @else if ($horizontal) {
+    left: 50%;
+    @include translate3d(-50%,0,0);
+  } @else if ($vertical) {
+    top: 50%;
+    @include translate3d(0,-50%,0);
+  }
+}
+
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+%vertical-align {
+  position: relative;
+  top: 50%;
+  @include translate3d(0,-50%,0);
+}
+
+%horizontal-align {
+  position: relative;
+  left: 50%;
+  @include translate3d(50%,0,0);
+}
+
+%reset-list{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+%transition{
+    webkit-transition:all 0.2s ease; 
+    -moz-transition:all 0.2s ease; 
+    -o-transition:all 0.2s ease; 
+    transition:all 0.2s ease;
+}
+
+%grayscale{
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+

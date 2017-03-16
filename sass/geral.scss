@@ -1,0 +1,17 @@
+@import  "molecules/mixins";
+
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/variables";
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins";
+
+@import  "molecules/mixins1";
+@import  "molecules/reset";
+
+@import "organims/header";
+@import "organims/footer";
+
+@import "templates/_bio.scss";
+
+.realtive{
+	position: relative;
+}
+

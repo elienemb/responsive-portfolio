@@ -1,0 +1,40 @@
+
+
+// Breakpoint
+
+$cellphone: max-width 480px
+$tablet: max-width 991px
+
+// Cores
+$black: #000
+$white: #fff
+$gray1: #9a999e
+$gray2: #d8d9dd
+
+
+//Flexbox
+
+=flexbox
+	display: -webkit-box
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flexbox
+	display: flex
+
+
+//Font-size
+
+=font-size($size)
+	font-size: $size
+	font-size: calculateRem($size)
+
+// Opacity
+
+=opacity($opacity)
+	opacity: $opacity
+	$opacity-ie: $opacity * 100
+	filter: alpha(opacity=$opacity-ie)
+
+
+
+

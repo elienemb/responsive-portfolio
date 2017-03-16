@@ -1,0 +1,47 @@
+
+footer{
+	width: 100%;
+	display: inline-block;
+	position: relative;
+	margin-top:30px;
+	margin-bottom:30px;
+
+	.social{
+		text-align: center;
+		list-style: none;
+		padding: 0;
+		margin-bottom: 20px;
+		li{
+			display:inline-block;
+			a{
+				color: $white;
+				font-size:22px;
+				float: left;
+				background-color: $gray1;
+				padding: 10px;
+				@extend %transition;
+				&:hover{
+					color: $gray1;
+					background-color: $gray2;
+
+				}
+				@include respond-to('large') {
+					padding: 5px 8px;  
+				}
+			}
+		}
+	}
+
+	p{
+		font-family: 'Josefin Sans';
+		font-size: 14px;
+		text-align: center;
+		margin-bottom:10px;
+	}
+	.dev{
+		text-align:center;
+		display:block;
+		font-family: 'Josefin Sans';
+		font-size: 12px;
+	}
+}
