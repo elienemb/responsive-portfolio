@@ -1,0 +1,73 @@
+.bio{
+	margin-top:25px;
+	position: relative;
+	.box-info{
+		background-color: $gray2;
+		padding: 15px 35px;
+		margin: 0;
+		display: inline-block;
+		margin: 0 15px;
+		@include respond-to(medium){
+			position: absolute;
+		    bottom: 15px;
+		    width: 50%;
+		    left: 33%;
+		    margin: 0 0 0 0;
+		}
+		
+
+		p{
+			font-family: 'Josefin Sans';
+			font-size: 16px;
+			line-height: 16px;
+		}
+	}
+}
+
+.nopadd-r{
+	@include respond-to(medium){
+		padding-right:0!important;
+	}
+}
+
+.nopadd{
+	@include respond-to(medium){
+		padding:0!important;
+	}
+}
+
+.expo{
+	margin-top:35px;
+	.nav-tabs{
+		border:none;
+		li{
+			padding-bottom:2px;
+			margin-right: 10px;
+			a{
+				padding: 2px 2px;
+				color: $white;
+				background-color: $gray1;
+				font-family: 'Josefin Sans';
+				font-size: 18px;
+				line-height: 18px;
+				border-radius: 0px;
+			}
+			&.active{
+				border-bottom: 2px solid $black;
+				a{
+					color: $white;
+					background-color: $gray1;
+				}
+			}
+		}
+	}
+
+	.tab-content{
+		padding:30px 0;
+		.tab-pane{
+			font-family: 'Josefin Sans';
+			font-size: 16px;
+			line-height: 16px;
+		}
+	}
+}

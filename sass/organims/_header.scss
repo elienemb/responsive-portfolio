@@ -1,0 +1,140 @@
+header{
+	width: 100%;
+	display: inline-block;
+	position: relative;
+
+	.logo{
+		text-align: center;
+		margin-bottom:20px;
+		width: 150px;
+		float:left;
+		h1{
+			margin: 0;
+			padding-top:35px;
+			a{
+				text-transform: uppercase;
+				color: $black;
+				font-family: 'Josefin Sans';
+				font-size: 36px;
+				line-height: 36px;
+
+				&:hover{
+					text-decoration: none;
+					color: $black;
+				}
+			}
+
+		}
+	}
+
+	.links{
+		@include respond-to('large') {
+			float:right;
+		}
+
+		nav{
+			display: inline-block;
+		}
+
+		nav{
+			width:100%;
+			@include respond-to('large') {
+				float:left;
+				width:auto;
+			}
+			.main-menu{
+				display:none;
+
+				@include respond-to('large') {
+					margin: 35px 40px 0;
+					padding: 0;
+					display: inline-block;
+				}
+				li{
+					text-align: center;
+					
+					@include respond-to('large') {
+						display: inline-block;
+						
+					}
+
+					a{
+						color: $gray1;
+						background-color: $gray2;
+						font-family: 'Josefin Sans';
+						text-transform: lowercase;
+						font-size: 18px;
+						padding: 10px 5px 10px 5px;
+						display:block;
+						&:hover{
+							text-decoration: none;
+							color: $gray2;
+						}
+						@include respond-to('large') {
+							padding: 12px 5px 0 5px;
+							background-color: #fff;
+							
+						}
+					}
+				}
+			}
+		}
+
+		.idioms{
+			background-color: $gray2;
+			width:40px;
+			height: 100px;
+			padding: 30px 9px;
+			-webkit-box-shadow: 1px 9px 8px -5px $gray1;
+    		-moz-box-shadow: 1px 9px 8px -5px $gray1;
+          	box-shadow: 1px 9px 8px -5px $gray1;
+          	position: absolute;
+          	top:0;
+          	right: 12px;
+          	@include respond-to('large'){
+          		position: relative;
+          		display: inline-block;
+          		width:40px;
+				height: 100px;
+          	}
+			a{
+				color: $white;
+				font-family: 'Josefin Sans';
+				text-transform: lowercase;
+				background-color:#868686;
+				text-align: center;
+				font-size: 16px;
+				display: inline-block;
+				width: 20px;
+				margin-bottom: 5px;
+				@include respond-to('large'){
+					font-size: 18px;
+					width: 20px;
+				}
+			}
+
+		}
+	}
+
+}
+
+// MENU
+
+nav button {
+	background: #9a9999;
+	border: none;
+	color: $white;
+	font-family: 'Josefin Sans';
+	text-transform: lowercase;
+	font-size: 14px;
+	padding: 10px;
+	display: inline-block;
+	position: absolute;
+	top: 35px;
+	right: 50px;
+	line-height:12px;
+	@include respond-to('large') {
+		display:none;		
+	}
+}
+
