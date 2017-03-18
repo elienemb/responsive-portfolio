@@ -1,0 +1,35 @@
+.contato{
+	margin-top:25px;
+	input,
+	textarea{
+		width: 100%;
+		padding: 7px;
+		font-family: 'Josefin Sans';
+		font-size: 16px;
+		line-height: 16px;
+	}
+	button{
+		background-color:$gray1;
+		font-family: 'Josefin Sans';
+		font-size: 16px;
+		line-height: 16px;
+		color: $white;
+		border: 1px solid $gray2;
+		text-align:center;
+		padding:10px;
+		transition: all 0.5s ease;
+		&:hover{
+			background: rgba(0,0,0,0);
+			color: $gray1;
+			box-shadow: inset 0 0 0 2px $gray1;
+		}
+	}
+	.bg-warning,
+	.bg-success{
+		padding:5px;
+		font-family: 'Josefin Sans';
+		font-size: 16px;
+		line-height: 16px;
+
+	}
+}

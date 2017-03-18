@@ -1,0 +1,20 @@
+.videos{
+	 
+	iframe{
+		width: 100%;
+		height: 320px;
+		@include respond-to(medium){
+			height: 360px;
+		}
+	}
+	@include respond-to(medium){
+		display: block;
+  		margin-left: auto;
+  		margin-right: auto;
+  		width:500px
+	}
+}
+
+.video{
+	margin: 20px 0;
+}

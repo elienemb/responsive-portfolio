@@ -10,8 +10,15 @@
 @import "organims/footer";
 
 @import "templates/_bio.scss";
+@import "templates/_videos.scss";
+@import "templates/_works.scss";
+@import "templates/_contato.scss";
 
 .realtive{
 	position: relative;
 }
 
+img{
+	width: 100%;
+    height: auto;
+}

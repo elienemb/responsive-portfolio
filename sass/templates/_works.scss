@@ -1,0 +1,127 @@
+.works{
+	h2{
+		font-family: 'Josefin Sans';
+		font-size: 28px;
+		line-height: 28px;
+		font-weight:100;
+		@include respond-to(medium){
+			font-size: 38px;
+			line-height: 38px;
+		}
+	}
+}
+
+.works figure {
+	position: relative;
+	float: left;
+	overflow: hidden;
+	margin: 10px 1%;
+	max-height: 420px;
+	width: 100%;
+	background: #3085a3;
+	text-align: center;
+	cursor: pointer;
+}
+
+.works figure img {
+	position: relative;
+	display: block;
+	min-height: 100%;
+	max-width: 100%;
+	opacity: 0.8;
+}
+
+.works figure figcaption {
+	padding: 2em;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 1.25em;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	background-color: rgba(0,0,0, 0.5);
+}
+
+.works figure figcaption::before,
+.works figure figcaption::after {
+	pointer-events: none;
+}
+
+.works figure figcaption,
+.works figure figcaption > a {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	
+}
+
+.works figure figcaption > a{
+	text-indent:-99999px;
+}
+
+
+/*---------------*/
+/***** EFEITO Roxy *****/
+/*---------------*/
+
+figure.effect-roxy {
+	background: -webkit-linear-gradient(45deg, #444242 0%, #000000 100%);
+	background: linear-gradient(45deg, #444242 0%,#000000 100%);
+}
+
+figure.effect-roxy img {
+	max-width: none;
+	width: -webkit-calc(100% + 60px);
+	width: calc(100% + 60px);
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: translate3d(-50px,0,0);
+	transform: translate3d(-50px,0,0);
+}
+
+figure.effect-roxy figcaption::before {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	bottom: 20px;
+	left: 20px;
+	border: 1px solid #fff;
+	content: '';
+	opacity: 0;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: translate3d(-20px,0,0);
+	transform: translate3d(-20px,0,0);
+}
+
+figure.effect-roxy figcaption {
+	padding: 1.2em;
+	text-align: left;
+}
+
+figure.effect-roxy h2 {
+	padding: 7% 0 10px 5px;
+
+}
+
+figure.effect-roxy p {
+	opacity: 0;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: translate3d(-10px,0,0);
+	transform: translate3d(-10px,0,0);
+}
+
+figure.effect-roxy:hover img {
+	opacity: 0.7;
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+figure.effect-roxy:hover figcaption::before,
+figure.effect-roxy:hover p {
+	opacity: 1;
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}

@@ -19,7 +19,7 @@ footer{
 				float: left;
 				background-color: $gray1;
 				padding: 10px;
-				@extend %transition;
+				transition: all 0.5s ease;
 				&:hover{
 					color: $gray1;
 					background-color: $gray2;
